@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(214, 244, 253);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3em;
+}
+
+i {
+    margin: auto 0;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 1px 0;
+}
