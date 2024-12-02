@@ -87,15 +87,17 @@ showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 const returningUser = document.querySelector('#returning-user');
 const userNameDisplay = document.querySelector('#user');
 const you = {
-    userName: 'Bobby Brown',
+    firstName: 'Bobby',
+    lastName: 'Brown',
     isReturning: true,
+    age: 35
 };
 function populateUser(isReturning, userName) {
     if (isReturning) {
-        returningUser.innerHTML = 'back';
+        returningUser.innerHTML = 'again';
     }
     userNameDisplay.innerHTML = userName;
 }
-populateUser(you.isReturning, you.userName);
+populateUser(you.isReturning, you.firstName);
 export {};
 //# sourceMappingURL=index.js.map
