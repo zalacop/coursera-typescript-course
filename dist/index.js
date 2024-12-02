@@ -79,9 +79,9 @@ const reviews = [
     }
 ];
 const review = document.querySelector("#review");
-function showReview(value) {
-    review.innerHTML = value.toString();
+function showReview(value, reviewer) {
+    review.innerHTML = 'Review total ' + value.toString() + ' ' + '| Last reviewed by ' + reviewer;
 }
-showReview(reviews.length);
+showReview(reviews.length, reviews[0].name);
 export {};
 //# sourceMappingURL=index.js.map

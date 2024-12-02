@@ -83,8 +83,11 @@ const reviews = [
 
 const review = document.querySelector("#review") as HTMLHeadingElement;
 
-function showReview (value : number) {
-    review.innerHTML = value.toString();
+function showReview(value: number, reviewer: string) {
+    review.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer;
 }
 
-showReview(reviews.length)
+showReview(reviews.length, reviews[0].name);
+
+
+
