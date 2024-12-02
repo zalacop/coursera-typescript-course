@@ -83,11 +83,12 @@ const reviews = [
 
 const review = document.querySelector("#review") as HTMLHeadingElement;
 
-function showReview(value: number, reviewer: string) {
-    review.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer;
+function showReview(value: number, reviewer: string, isLoyalty: boolean) {
+    const starDisplay = isLoyalty ? ' ⭐️' : '';
+    review.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + starDisplay;
 }
 
-showReview(reviews.length, reviews[0].name);
+showReview(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 
 
 

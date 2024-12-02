@@ -79,9 +79,10 @@ const reviews = [
     }
 ];
 const review = document.querySelector("#review");
-function showReview(value, reviewer) {
-    review.innerHTML = 'Review total ' + value.toString() + ' ' + '| Last reviewed by ' + reviewer;
+function showReview(value, reviewer, isLoyalty) {
+    const starDisplay = isLoyalty ? ' ⭐️' : '';
+    review.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + starDisplay;
 }
-showReview(reviews.length, reviews[0].name);
+showReview(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
 export {};
 //# sourceMappingURL=index.js.map
