@@ -81,8 +81,21 @@ const reviews = [
 const review = document.querySelector("#review");
 function showReview(value, reviewer, isLoyalty) {
     const starDisplay = isLoyalty ? ' ⭐️' : '';
-    review.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + starDisplay;
+    review.innerHTML = 'Review total ' + value.toString() + '| Last reviewed by ' + reviewer + starDisplay;
 }
-showReview(reviews.length, reviews[0].name, reviews[0].loyaltyUser);
+showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
+const returningUser = document.querySelector('#returning-user');
+const userNameDisplay = document.querySelector('#user');
+const you = {
+    userName: 'Bobby Brown',
+    isReturning: true,
+};
+function populateUser(isReturning, userName) {
+    if (isReturning) {
+        returningUser.innerHTML = 'back';
+    }
+    userNameDisplay.innerHTML = userName;
+}
+populateUser(you.isReturning, you.userName);
 export {};
 //# sourceMappingURL=index.js.map
