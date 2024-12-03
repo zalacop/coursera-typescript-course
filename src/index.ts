@@ -85,7 +85,7 @@ const review = document.querySelector("#review") as HTMLHeadingElement;
 
 function showReview(value: number, reviewer: string, isLoyalty: boolean) {
     const starDisplay = isLoyalty ? ' ⭐️' : '';
-    review.innerHTML = 'Review total ' + value.toString() + '| Last reviewed by ' + reviewer + starDisplay;
+    review.innerHTML = 'Review total ' + value.toString() + ' | Last reviewed by ' + reviewer + starDisplay;
 }
 
 showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
@@ -98,12 +98,14 @@ const you: {
     firstName: string,
     lastName: string,
     isReturning: boolean,
-    age: number
+    age: number,
+    stayedAt: (string | number)[];
 } = {
     firstName: 'Bobby',
     lastName: 'Brown',
     isReturning: true,
-    age: 35
+    age: 35,
+    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 }
 
 

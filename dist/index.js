@@ -81,7 +81,7 @@ const reviews = [
 const review = document.querySelector("#review");
 function showReview(value, reviewer, isLoyalty) {
     const starDisplay = isLoyalty ? ' ⭐️' : '';
-    review.innerHTML = 'Review total ' + value.toString() + '| Last reviewed by ' + reviewer + starDisplay;
+    review.innerHTML = 'Review total ' + value.toString() + ' | Last reviewed by ' + reviewer + starDisplay;
 }
 showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 const returningUser = document.querySelector('#returning-user');
