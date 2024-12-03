@@ -1,6 +1,11 @@
 import * as fs from 'fs';
 
-const reviews = [
+const reviews : {
+    name: string;
+    stars: number;
+    loyaltyUser: boolean;
+    date: string;
+}[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -95,10 +100,10 @@ const returningUser = document.querySelector('#returning-user')
 const userNameDisplay = document.querySelector('#user')
 
 const you: {
-    firstName: string,
-    lastName: string,
-    isReturning: boolean,
-    age: number,
+    firstName: string;
+    lastName: string;
+    isReturning: boolean;
+    age: number;
     stayedAt: (string | number)[];
 } = {
     firstName: 'Bobby',
