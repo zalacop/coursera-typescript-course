@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-
+import { showReview, populateUser } from './utils.js';
 const reviews : {
     name: string;
     stars: number;
@@ -86,19 +86,6 @@ const reviews : {
     }
 ];
 
-const review = document.querySelector("#review") as HTMLHeadingElement;
-
-function showReview(value: number, reviewer: string, isLoyalty: boolean) {
-    const starDisplay = isLoyalty ? ' ⭐️' : '';
-    review.innerHTML = 'Review total ' + value.toString() + ' | Last reviewed by ' + reviewer + starDisplay;
-}
-
-showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
-
-
-const returningUser = document.querySelector('#returning-user')
-const userNameDisplay = document.querySelector('#user')
-
 const you: {
     firstName: string;
     lastName: string;
@@ -113,13 +100,6 @@ const you: {
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 }
 
+showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 
-function populateUser(isReturning: boolean, userName: string ) {
-    if (isReturning){
-        returningUser.innerHTML = 'again';
-    } 
-    userNameDisplay.innerHTML = userName;
-}
-
-populateUser(you.isReturning, you.firstName)
-
+populateUser(you.isReturning, you.firstName);
