@@ -86,6 +86,112 @@ const you = {
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 };
+const properties = [
+    {
+        image: '',
+        title: 'Colombian Shack',
+        price: 45,
+        location: {
+            firstLine: 'shack 37',
+            city: 'Bogota',
+            code: 45632,
+            country: 'Columbia',
+        },
+        contact: 'marywinkle@gmail.com',
+        isAvailable: true,
+    },
+    {
+        image: '',
+        title: 'Cozy Chalet',
+        price: 110,
+        location: {
+            firstLine: 'Chalet 7',
+            city: 'Zermatt',
+            code: 3920,
+            country: 'Switzerland',
+        },
+        contact: 'alpinegetaway@example.com',
+        isAvailable: true,
+    },
+    {
+        image: '',
+        title: 'Beach Bungalow',
+        price: 85,
+        location: {
+            firstLine: 'Bungalow 45',
+            city: 'Phuket',
+            code: 83100,
+            country: 'Thailand',
+        },
+        contact: 'beachvibes@example.com',
+        isAvailable: true,
+    },
+    {
+        image: '',
+        title: 'Historic Townhouse',
+        price: 140,
+        location: {
+            firstLine: 'House 22B',
+            city: 'Lisbon',
+            code: 1100,
+            country: 'Portugal',
+        },
+        contact: 'townhouseheritage@example.com',
+        isAvailable: false,
+    },
+    {
+        image: '',
+        title: 'Modern Studio',
+        price: 60,
+        location: {
+            firstLine: 'Studio 19',
+            city: 'Tokyo',
+            code: 10001,
+            country: 'Japan',
+        },
+        contact: 'tokyoliving@example.com',
+        isAvailable: true,
+    },
+    {
+        image: '',
+        title: 'Rustic Cottage',
+        price: 50,
+        location: {
+            firstLine: 'Cottage 3A',
+            city: 'Cotswolds',
+            code: 6743,
+            country: 'United Kingdom',
+        },
+        contact: 'countrysideserenity@example.com',
+        isAvailable: true,
+    },
+    {
+        image: '',
+        title: 'Desert Villa',
+        price: 250,
+        location: {
+            firstLine: 'Villa 21',
+            city: 'Dubai',
+            code: 642398,
+            country: 'United Arab Emirates',
+        },
+        contact: 'luxuryindesert@example.com',
+        isAvailable: false,
+    },
+    {
+        image: '',
+        title: 'Rainforest Hideaway',
+        price: 130,
+        location: {
+            firstLine: 'Lodge 18',
+            city: 'Manaus',
+            code: 69000,
+            country: 'Brazil',
+        },
+        contact: 'rainforestlodge@example.com',
+        isAvailable: true,
+    }
+];
 showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 populateUser(you.isReturning, you.firstName);
 //# sourceMappingURL=index.js.map
