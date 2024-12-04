@@ -97,7 +97,7 @@ const properties = [
             code: 45632,
             country: 'Columbia',
         },
-        contact: 'marywinkle@gmail.com',
+        contact: [+1123495082908, 'marywinkle@gmail.com'],
         isAvailable: true,
     },
     {
@@ -110,7 +110,7 @@ const properties = [
             code: 3920,
             country: 'Switzerland',
         },
-        contact: 'alpinegetaway@example.com',
+        contact: [+1123495082908, 'alpinegetaway@example.com'],
         isAvailable: true,
     },
     {
@@ -123,7 +123,7 @@ const properties = [
             code: 83100,
             country: 'Thailand',
         },
-        contact: 'beachvibes@example.com',
+        contact: [+1123495082908, 'beachvibes@gmail.com'],
         isAvailable: true,
     },
     {
@@ -136,7 +136,7 @@ const properties = [
             code: 1100,
             country: 'Portugal',
         },
-        contact: 'townhouseheritage@example.com',
+        contact: [+1123495082908, 'townhouseheritage@hotmail.com'],
         isAvailable: false,
     },
     {
@@ -149,7 +149,7 @@ const properties = [
             code: 10001,
             country: 'Japan',
         },
-        contact: 'tokyoliving@example.com',
+        contact: [+1123495082908, 'tokyoliving@example.com'],
         isAvailable: true,
     },
     {
@@ -162,7 +162,7 @@ const properties = [
             code: 6743,
             country: 'United Kingdom',
         },
-        contact: 'countrysideserenity@example.com',
+        contact: [+1123495082908, 'countrysideserenity@example.com'],
         isAvailable: true,
     },
     {
@@ -175,7 +175,7 @@ const properties = [
             code: 642398,
             country: 'United Arab Emirates',
         },
-        contact: 'luxuryindesert@example.com',
+        contact: [+1123495082908, 'luxuryindesert@hotmail.com'],
         isAvailable: false,
     },
     {
@@ -188,7 +188,7 @@ const properties = [
             code: 69000,
             country: 'Brazil',
         },
-        contact: 'rainforestlodge@example.com',
+        contact: [+1123495082908, 'rainforestlodge@yahoo.com'],
         isAvailable: true,
     }
 ];
