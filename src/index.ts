@@ -1,5 +1,8 @@
 import * as fs from 'fs';
 import { showReview, populateUser } from './utils.js';
+import { Permissions } from './enums.js';
+
+
 const reviews : {
     name: string;
     stars: number;
@@ -86,40 +89,28 @@ const reviews : {
     }
 ];
 
-
-// ENUMS
-
-// const ADMIN = 'admin';
-// const READ_ONLY = 'read-only';
-
-// enum Permissions {
-//     ADMIN,
-//     READ_ONLY
-// }
-
-// const you = {
+// const you: {
+//     firstName: string;
+//     lastName: string;
+//     isReturning: boolean;
+//     age: number;
+//     stayedAt: (string | number)[];
+// } = {
 //     firstName: 'Bobby',
 //     lastName: 'Brown',
-//     permissions: Permissions.ADMIN,
 //     isReturning: true,
 //     age: 35,
 //     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 // }
 
-const you: {
-    firstName: string;
-    lastName: string;
-    isReturning: boolean;
-    age: number;
-    stayedAt: (string | number)[];
-} = {
+const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
+    permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
-    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
+    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
-
 
 showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 
