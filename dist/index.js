@@ -88,7 +88,7 @@ const you = {
 };
 const properties = [
     {
-        image: '',
+        image: 'https://img.freepik.com/premium-photo/small-wooden-house-large-stone-forest_236859-1336.jpg?w=740',
         title: 'Colombian Shack',
         price: 45,
         location: {
@@ -101,7 +101,7 @@ const properties = [
         isAvailable: true,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/free-photo/cozy-cabin-nestled-colorful-autumn-forest_9975-23880.jpg',
         title: 'Cozy Chalet',
         price: 110,
         location: {
@@ -114,7 +114,7 @@ const properties = [
         isAvailable: true,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/premium-photo/craftsman-bungalow-lush-suburban-setting-front-view_501731-18767.jpg?w=1800',
         title: 'Beach Bungalow',
         price: 85,
         location: {
@@ -127,7 +127,7 @@ const properties = [
         isAvailable: true,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/free-photo/old-brick-house-paved-street_23-2147764400.jpg?t=st=1733318627~exp=1733322227~hmac=91bff1edf849a2fc224c49fe809ee5c9607d4720aebd6f884746eb7251a02a17&w=1800',
         title: 'Historic Townhouse',
         price: 140,
         location: {
@@ -140,7 +140,7 @@ const properties = [
         isAvailable: false,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/premium-photo/modern-interior-bright-kitchen-bedroom-apartment-with-tea-croissant-foreground_120968-361.jpg?w=1800',
         title: 'Modern Studio',
         price: 60,
         location: {
@@ -153,7 +153,7 @@ const properties = [
         isAvailable: true,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/free-photo/cozy-cabin-nestled-colorful-autumn-forest_9975-23880.jpg',
         title: 'Rustic Cottage',
         price: 50,
         location: {
@@ -166,7 +166,7 @@ const properties = [
         isAvailable: true,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/premium-photo/luxury-house-with-pool-against-sky_1048944-11769252.jpg?w=1800',
         title: 'Desert Villa',
         price: 250,
         location: {
@@ -179,7 +179,7 @@ const properties = [
         isAvailable: false,
     },
     {
-        image: '',
+        image: 'https://img.freepik.com/free-photo/typical-norwegian-rural-cottage-with-breathtaking-landscape-beautiful-greenery-norway_181624-9584.jpg?t=st=1733318716~exp=1733322316~hmac=17fc9333c831544a41329f2fd130360ccfa435751882461598b035a7a2fb63c6&w=1480',
         title: 'Rainforest Hideaway',
         price: 130,
         location: {
