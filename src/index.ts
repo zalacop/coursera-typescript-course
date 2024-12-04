@@ -86,6 +86,26 @@ const reviews : {
     }
 ];
 
+
+// ENUMS
+
+// const ADMIN = 'admin';
+// const READ_ONLY = 'read-only';
+
+// enum Permissions {
+//     ADMIN,
+//     READ_ONLY
+// }
+
+// const you = {
+//     firstName: 'Bobby',
+//     lastName: 'Brown',
+//     permissions: Permissions.ADMIN,
+//     isReturning: true,
+//     age: 35,
+//     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
+// }
+
 const you: {
     firstName: string;
     lastName: string;
@@ -99,6 +119,11 @@ const you: {
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 }
+
+
+showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
+
+populateUser(you.isReturning, you.firstName);
 
 const properties: {
     image: string;
@@ -217,12 +242,7 @@ const properties: {
         contact: [ +1123495082908, 'rainforestlodge@yahoo.com'],
         isAvailable: true,
     }
-    
 ]
-
-showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
-
-populateUser(you.isReturning, you.firstName);
 
 const propertiesContainer = document.querySelector('.properties');
 

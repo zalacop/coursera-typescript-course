@@ -79,6 +79,21 @@ const reviews = [
         date: '17-03-2025'
     }
 ];
+// ENUMS
+// const ADMIN = 'admin';
+// const READ_ONLY = 'read-only';
+// enum Permissions {
+//     ADMIN,
+//     READ_ONLY
+// }
+// const you = {
+//     firstName: 'Bobby',
+//     lastName: 'Brown',
+//     permissions: Permissions.ADMIN,
+//     isReturning: true,
+//     age: 35,
+//     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
+// }
 const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
@@ -86,6 +101,8 @@ const you = {
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 };
+showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
+populateUser(you.isReturning, you.firstName);
 const properties = [
     {
         image: 'https://img.freepik.com/premium-photo/small-wooden-house-large-stone-forest_236859-1336.jpg?w=740',
@@ -192,8 +209,6 @@ const properties = [
         isAvailable: true,
     }
 ];
-showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
-populateUser(you.isReturning, you.firstName);
 const propertiesContainer = document.querySelector('.properties');
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div');
