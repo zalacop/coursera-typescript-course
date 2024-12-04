@@ -235,3 +235,8 @@ for (let i = 0; i < properties.length; i++ ) {
     card.appendChild(image);
     propertiesContainer.appendChild(card);
 }
+
+const footer = document.querySelector('footer');
+
+let currentLocation: [string, string, number] = ['Oslo', '15:55', -3];
+footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C'
