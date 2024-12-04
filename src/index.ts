@@ -223,3 +223,15 @@ const properties: {
 showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 
 populateUser(you.isReturning, you.firstName);
+
+const propertiesContainer = document.querySelector('.properties');
+
+for (let i = 0; i < properties.length; i++ ) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = properties[i].title;
+    const image = document.createElement('img');
+    image.setAttribute('src', properties[i].image);
+    card.appendChild(image);
+    propertiesContainer.appendChild(card);
+}
