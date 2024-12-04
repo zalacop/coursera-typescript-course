@@ -1,118 +1,112 @@
 import * as fs from 'fs';
 import { showReview, populateUser } from './utils.js';
-import { Permissions } from './enums.js';
+import { Permissions, LoyaltyUser } from './enums.js';
 
 
 const reviews : {
     name: string;
     stars: number;
-    loyaltyUser: boolean;
+    loyaltyUser: LoyaltyUser;
     date: string;
 }[] = [
     {
         name: 'Sheia',
         stars: 5,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.BRONZE_USER,
         date: '01-04-2021'
     },
     {
         name: 'Andrzej',
         stars: 3,
-        loyaltyUser: false,
+        loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '28-03-2021'
     },
     {
         name: 'Omar',
         stars: 4,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
         date: '27-03-2021'
     },
     {
         name: 'Emily',
         stars: 5,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.BRONZE_USER,
         date: '25-03-2021'
     },
     {
         name: 'Liam',
         stars: 2,
-        loyaltyUser: false,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
         date: '24-03-2021'
     },
     {
         name: 'Sophia',
         stars: 4,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '23-03-2021'
     },
     {
         name: 'Jackson',
         stars: 3,
-        loyaltyUser: false,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
         date: '22-03-2021'
     },
     {
         name: 'Ava',
         stars: 5,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.BRONZE_USER,
         date: '21-03-2021'
     },
     {
         name: 'Mason',
         stars: 4,
-        loyaltyUser: false,
+        loyaltyUser: LoyaltyUser.BRONZE_USER,
         date: '20-03-2021'
     },
     {
         name: 'Olivia',
         stars: 5,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '19-03-2021'
     },
     {
         name: 'Lucas',
         stars: 1,
-        loyaltyUser: false,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
         date: '18-03-2021'
     },
     {
         name: 'Amelia',
         stars: 4,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '17-03-2021'
     },
     {
-        name: 'nkjsfn',
+        name: 'Signe',
         stars: 2,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.BRONZE_USER,
         date: '17-03-2025'
     }
 ];
 
-// const you: {
-//     firstName: string;
-//     lastName: string;
-//     isReturning: boolean;
-//     age: number;
-//     stayedAt: (string | number)[];
-// } = {
-//     firstName: 'Bobby',
-//     lastName: 'Brown',
-//     isReturning: true,
-//     age: 35,
-//     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
-// }
 
-const you = {
+showReview(reviews.length, reviews[2].name, reviews[2].loyaltyUser);
+
+const you: {
+    firstName: string;
+    lastName: string;
+    permissions: Permissions,
+    isReturning: boolean;
+    age: number;
+    stayedAt: (string | number)[];
+} = {
     firstName: 'Bobby',
     lastName: 'Brown',
     permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
-    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
+    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow', 24]
 }
-
-showReview(reviews.length, reviews[1].name, reviews[1].loyaltyUser);
 
 populateUser(you.isReturning, you.firstName);
 

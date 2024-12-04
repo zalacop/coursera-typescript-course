@@ -1,7 +1,9 @@
+import { LoyaltyUser } from "./enums.js";
+
 const review = document.querySelector("#review") as HTMLHeadingElement;
 
-export function showReview(value: number, reviewer: string, isLoyalty: boolean) {
-    const starDisplay = isLoyalty ? ' ⭐️' : '';
+export function showReview(value: number, reviewer: string, isLoyalty: LoyaltyUser) {
+    const starDisplay = isLoyalty === LoyaltyUser.GOLD_USER ? ' ⭐️' : '';
     review.innerHTML = 'Review total ' + value.toString() + ' | Last reviewed by ' + reviewer + starDisplay;
 }
 
