@@ -1,5 +1,17 @@
 import { showReview, populateUser } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
+// const reviews : ({
+//     name: string;
+//     stars: number;
+//     loyaltyUser: LoyaltyUser;
+//     date: string;
+// } | {
+//     name: string;
+//     stars: number;
+//     loyaltyUser: LoyaltyUser;
+//     date: string;
+//     description: string;
+// })[] =
 const reviews = [
     {
         name: 'Sheia',
@@ -17,7 +29,8 @@ const reviews = [
         name: 'Omar',
         stars: 4,
         loyaltyUser: LoyaltyUser.GOLD_USER,
-        date: '27-03-2021'
+        date: '27-03-2021',
+        description: 'Great hosts, location was a bit further than said'
     },
     {
         name: 'Emily',
