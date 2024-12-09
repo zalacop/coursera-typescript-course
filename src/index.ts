@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { showReview, populateUser } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
+import { Country, Price } from './types.js';
 
 let isLoggedIn: boolean;
 
@@ -119,9 +120,6 @@ const you: {
 
 populateUser(you.isReturning, you.firstName);
 
-// type Alias
-type Price = 45 | 110 | 85 | 140 | 60 | 50 | 250 | 130;
-
 const properties: {
     image: string;
     title: string;
@@ -130,7 +128,7 @@ const properties: {
         firstLine: string;
         city: string;
         code: number;
-        country: string; 
+        country: Country; 
     };
     contact: [number, string];
     isAvailable: boolean;
