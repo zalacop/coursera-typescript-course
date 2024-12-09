@@ -1,5 +1,6 @@
 import { showReview, populateUser } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
+let isLoggedIn;
 // const reviews : ({
 //     name: string;
 //     stars: number;
@@ -209,6 +210,15 @@ const properties = [
         isAvailable: true,
     }
 ];
+let authorityStatus;
+isLoggedIn = true;
+function showDetails(authorityStatus, element, price) {
+    if (authorityStatus) {
+        const priceDisplay = document.createElement('div');
+        priceDisplay.innerHTML = price.toString() + '$ per night';
+        element.appendChild(priceDisplay);
+    }
+}
 const propertiesContainer = document.querySelector('.properties');
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div');
@@ -218,6 +228,7 @@ for (let i = 0; i < properties.length; i++) {
     image.setAttribute('src', properties[i].image);
     card.appendChild(image);
     propertiesContainer.appendChild(card);
+    showDetails(isLoggedIn, card, properties[i].price);
 }
 const footer = document.querySelector('footer');
 let currentLocation = ['Oslo', '15:55', -3];

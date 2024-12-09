@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import { showReview, populateUser } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 
+let isLoggedIn: boolean;
 
 // const reviews : ({
 //     name: string;
@@ -97,7 +98,6 @@ const reviews : any[] = [
         date: '17-03-2025'
     }
 ];
-
 
 showReview(reviews.length, reviews[2].name, reviews[2].loyaltyUser);
 
@@ -238,6 +238,18 @@ const properties: {
     }
 ]
 
+let authorityStatus: any;
+
+isLoggedIn = true;
+
+function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
+    if(authorityStatus) {
+        const priceDisplay = document.createElement('div');
+        priceDisplay.innerHTML = price.toString() + '$ per night';
+        element.appendChild(priceDisplay);
+    }
+}
+
 const propertiesContainer = document.querySelector('.properties');
 
 for (let i = 0; i < properties.length; i++ ) {
@@ -248,9 +260,10 @@ for (let i = 0; i < properties.length; i++ ) {
     image.setAttribute('src', properties[i].image);
     card.appendChild(image);
     propertiesContainer.appendChild(card);
+    showDetails(isLoggedIn, card, properties[i].price);
 }
 
 const footer = document.querySelector('footer');
 
 let currentLocation: [string, string, number] = ['Oslo', '15:55', -3];
-footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C'
+footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C';
