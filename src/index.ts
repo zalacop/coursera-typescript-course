@@ -119,10 +119,13 @@ const you: {
 
 populateUser(you.isReturning, you.firstName);
 
+// type Alias
+type Price = 45 | 110 | 85 | 140 | 60 | 50 | 250 | 130;
+
 const properties: {
     image: string;
     title: string;
-    price: number;
+    price: Price;
     location: {
         firstLine: string;
         city: string;
