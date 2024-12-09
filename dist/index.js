@@ -228,7 +228,7 @@ for (let i = 0; i < properties.length; i++) {
     image.setAttribute('src', properties[i].image);
     card.appendChild(image);
     propertiesContainer.appendChild(card);
-    showDetails(isLoggedIn, card, properties[i].price);
+    showDetails(you.permissions, card, properties[i].price);
 }
 const footer = document.querySelector('footer');
 let currentLocation = ['Oslo', '15:55', -3];
