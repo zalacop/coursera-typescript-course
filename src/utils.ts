@@ -4,7 +4,7 @@ const review = document.querySelector("#review") as HTMLHeadingElement;
 
 export function showReview(value: number, reviewer: string, isLoyalty: LoyaltyUser) {
     const starDisplay = isLoyalty === LoyaltyUser.GOLD_USER ? ' ⭐️' : '';
-    review.innerHTML = 'Review total ' + value.toString() + ' | Last reviewed by ' + reviewer + starDisplay;
+    review.innerHTML = value.toString() + ' Review' + makeMultiple(value) + ' | Last reviewed by ' + reviewer + starDisplay;
 }
 
 const returningUser = document.querySelector('#returning-user');
@@ -27,4 +27,10 @@ export function showDetails(authorityStatus: boolean | Permissions, element : HT
 
 function add(firstValue: number, secondValue: number): number {
     return firstValue + secondValue
+}
+
+export function makeMultiple(value: number) : string {
+    if(value > 1 || value == 0) {
+        return 's';
+    } else return '';
 }
