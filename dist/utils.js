@@ -20,20 +20,6 @@ export function showDetails(authorityStatus, element, price) {
     }
 }
 function add(firstValue, secondValue) {
-    let result;
-    if (typeof firstValue === 'number' && typeof secondValue === 'number') {
-        result = firstValue + secondValue;
-    }
-    if (typeof firstValue === 'string' && typeof secondValue === 'string') {
-        result = firstValue + ' ' + secondValue;
-    }
-    if (typeof firstValue === 'number' && typeof secondValue === 'string') {
-        console.log('Cannot preform this addition');
-    }
-    if (typeof firstValue === 'string' && typeof secondValue === 'number') {
-        console.log('Cannot preform this addition');
-    }
+    return firstValue + secondValue;
 }
-const combinedReviews = add(6, 3);
-const firstAndLastName = add('Mulan', 'Fa');
 //# sourceMappingURL=utils.js.map

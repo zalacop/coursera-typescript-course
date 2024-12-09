@@ -25,21 +25,6 @@ export function showDetails(authorityStatus: boolean | Permissions, element : HT
     }
 }
 
-function add(firstValue: (number | string), secondValue: (number | string)) {
-    let result;
-    if(typeof firstValue === 'number' && typeof secondValue === 'number') {
-        result = firstValue + secondValue;
-    }
-    if(typeof firstValue === 'string' && typeof secondValue === 'string') {
-        result = firstValue + ' ' + secondValue;
-    }
-    if(typeof firstValue === 'number' && typeof secondValue === 'string') {
-        console.log('Cannot preform this addition');
-    }
-    if(typeof firstValue === 'string' && typeof secondValue === 'number') {
-        console.log('Cannot preform this addition');
-    }
+function add(firstValue: number, secondValue: number): number {
+    return firstValue + secondValue
 }
-
-const combinedReviews = add(6, 3);
-const firstAndLastName = add('Mulan', 'Fa');
