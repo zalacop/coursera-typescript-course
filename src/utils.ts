@@ -1,4 +1,4 @@
-import { LoyaltyUser } from "./enums.js";
+import { LoyaltyUser, Permissions } from "./enums.js";
 
 const review = document.querySelector("#review") as HTMLHeadingElement;
 
@@ -15,6 +15,14 @@ export function populateUser(isReturning: boolean, userName: string ) {
         returningUser.innerHTML = 'again';
     } 
     userNameDisplay.innerHTML = userName;
+}
+
+export function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
+    if(authorityStatus) {
+        const priceDisplay = document.createElement('div');
+        priceDisplay.innerHTML = price.toString() + '$ per night';
+        element.appendChild(priceDisplay);
+    }
 }
 
 function add(firstValue: (number | string), secondValue: (number | string)) {

@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { showReview, populateUser } from './utils.js';
+import { showReview, populateUser, showDetails } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 import { Country, Price } from './types.js';
 
@@ -242,14 +242,6 @@ const properties: {
 let authorityStatus: any;
 
 isLoggedIn = true;
-
-function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
-    if(authorityStatus) {
-        const priceDisplay = document.createElement('div');
-        priceDisplay.innerHTML = price.toString() + '$ per night';
-        element.appendChild(priceDisplay);
-    }
-}
 
 const propertiesContainer = document.querySelector('.properties');
 

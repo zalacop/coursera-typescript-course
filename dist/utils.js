@@ -12,6 +12,13 @@ export function populateUser(isReturning, userName) {
     }
     userNameDisplay.innerHTML = userName;
 }
+export function showDetails(authorityStatus, element, price) {
+    if (authorityStatus) {
+        const priceDisplay = document.createElement('div');
+        priceDisplay.innerHTML = price.toString() + '$ per night';
+        element.appendChild(priceDisplay);
+    }
+}
 function add(firstValue, secondValue) {
     let result;
     if (typeof firstValue === 'number' && typeof secondValue === 'number') {

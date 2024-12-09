@@ -1,4 +1,4 @@
-import { showReview, populateUser } from './utils.js';
+import { showReview, populateUser, showDetails } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 let isLoggedIn;
 // const reviews : ({
@@ -212,13 +212,6 @@ const properties = [
 ];
 let authorityStatus;
 isLoggedIn = true;
-function showDetails(authorityStatus, element, price) {
-    if (authorityStatus) {
-        const priceDisplay = document.createElement('div');
-        priceDisplay.innerHTML = price.toString() + '$ per night';
-        element.appendChild(priceDisplay);
-    }
-}
 const propertiesContainer = document.querySelector('.properties');
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div');
