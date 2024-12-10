@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { showReview, populateUser, showDetails } from './utils.js';
+import { showReview, populateUser, showDetails, getTopTwoReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 import { Country, Price } from './types.js';
 
@@ -255,6 +255,33 @@ for (let i = 0; i < properties.length; i++ ) {
     propertiesContainer.appendChild(card);
     showDetails(you.permissions, card, properties[i].price);
 }
+
+const reviewContainer = document.querySelector('.reviews');
+const container = document.querySelector('.container');
+const button = document.querySelector('button');
+
+let count = 0;
+
+function addReviews(array: {
+    name: string;
+    stars: number;
+    loyaltyUser: LoyaltyUser;
+    date: string;
+}[] ) : void {
+    if(!count) {
+        count++;
+        const topTwo = getTopTwoReviews(array);
+        for (let i = 0; i < topTwo.length; i++) {
+            const card = document.createElement('div');
+            card.classList.add('review-card');
+            card.innerHTML = topTwo[i].stars + ' stars from ' + topTwo[i].name;
+            reviewContainer.appendChild(card);
+        }
+        button.style.display = 'none';
+    }
+}
+
+button.addEventListener('click', () => addReviews(reviews));
 
 const footer = document.querySelector('footer');
 

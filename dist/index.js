@@ -1,4 +1,4 @@
-import { showReview, populateUser, showDetails } from './utils.js';
+import { showReview, populateUser, showDetails, getTopTwoReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 let isLoggedIn;
 // const reviews : ({
@@ -223,6 +223,24 @@ for (let i = 0; i < properties.length; i++) {
     propertiesContainer.appendChild(card);
     showDetails(you.permissions, card, properties[i].price);
 }
+const reviewContainer = document.querySelector('.reviews');
+const container = document.querySelector('.container');
+const button = document.querySelector('button');
+let count = 0;
+function addReviews(array) {
+    if (!count) {
+        count++;
+        const topTwo = getTopTwoReviews(array);
+        for (let i = 0; i < topTwo.length; i++) {
+            const card = document.createElement('div');
+            card.classList.add('review-card');
+            card.innerHTML = topTwo[i].stars + ' stars from ' + topTwo[i].name;
+            reviewContainer.appendChild(card);
+        }
+        button.style.display = 'none';
+    }
+}
+button.addEventListener('click', () => addReviews(reviews));
 const footer = document.querySelector('footer');
 let currentLocation = ['Oslo', '15:55', -3];
 footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C';
