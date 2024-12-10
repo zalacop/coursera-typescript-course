@@ -31,6 +31,23 @@ button {
     margin-left: 45%;
 }
 
+.review-card {
+    padding: 10px;
+}
+
+.reviews {
+    display: flex;
+    padding: 10px;
+    margin-left: 30%;
+}
+
+.break {
+    height: 1px;
+    width: 90%;
+    background-color: coral;
+    margin: 20px 5%;
+}
+
 .properties {
     margin: 30px 3%;
     display: grid;
