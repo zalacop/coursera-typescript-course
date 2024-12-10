@@ -274,7 +274,7 @@ function addReviews(array: {
         for (let i = 0; i < topTwo.length; i++) {
             const card = document.createElement('div');
             card.classList.add('review-card');
-            card.innerHTML = topTwo[i].stars + ' stars from ' + topTwo[i].name;
+            card.innerHTML = topTwo[i].stars + ' ⭐️ from ' + topTwo[i].name;
             reviewContainer.appendChild(card);
         }
         button.style.display = 'none';
