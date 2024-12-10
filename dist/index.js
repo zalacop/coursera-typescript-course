@@ -1,4 +1,4 @@
-import { showReview, populateUser, showDetails, getTopTwoReviews } from './utils.js';
+import { showReview, populateUser, showDetails, getTopFourReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 let isLoggedIn;
 // const reviews : ({
@@ -230,11 +230,11 @@ let count = 0;
 function addReviews(array) {
     if (!count) {
         count++;
-        const topTwo = getTopTwoReviews(array);
-        for (let i = 0; i < topTwo.length; i++) {
+        const topFour = getTopFourReviews(array);
+        for (let i = 0; i < topFour.length; i++) {
             const card = document.createElement('div');
             card.classList.add('review-card');
-            card.innerHTML = topTwo[i].stars + ' ⭐️ from ' + topTwo[i].name;
+            card.innerHTML = topFour[i].stars + ' ⭐️ from ' + topFour[i].name;
             reviewContainer.appendChild(card);
         }
         button.style.display = 'none';

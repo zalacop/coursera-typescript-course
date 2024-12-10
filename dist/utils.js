@@ -29,8 +29,8 @@ export function makeMultiple(value) {
     else
         return '';
 }
-export function getTopTwoReviews(reviews) {
+export function getTopFourReviews(reviews) {
     const sortedReviews = reviews.sort((a, b) => b.stars - a.stars);
-    return sortedReviews.slice(0, 2);
+    return sortedReviews.slice(0, 4);
 }
 //# sourceMappingURL=utils.js.map

@@ -35,7 +35,7 @@ export function makeMultiple(value: number) : string {
     } else return '';
 }
 
-export function getTopTwoReviews(reviews: {
+export function getTopFourReviews(reviews: {
     name: string;
     stars: number;
     loyaltyUser: LoyaltyUser;
@@ -47,5 +47,5 @@ export function getTopTwoReviews(reviews: {
     date: string;
 }[] {
     const sortedReviews = reviews.sort((a, b) => b.stars - a.stars);
-    return sortedReviews.slice(0, 2);
+    return sortedReviews.slice(0, 4);
 }
