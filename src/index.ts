@@ -5,20 +5,14 @@ import { Country, Price } from './types.js';
 
 let isLoggedIn: boolean;
 
-// const reviews : ({
-//     name: string;
-//     stars: number;
-//     loyaltyUser: LoyaltyUser;
-//     date: string;
-// } | {
-//     name: string;
-//     stars: number;
-//     loyaltyUser: LoyaltyUser;
-//     date: string;
-//     description: string;
-// })[] =
+interface Review {
+    name: string;
+    stars: number;
+    loyaltyUser: LoyaltyUser;
+    date: string;
+}
 
-const reviews : any[] = [
+const reviews : Review[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -35,8 +29,7 @@ const reviews : any[] = [
         name: 'Omar',
         stars: 4,
         loyaltyUser: LoyaltyUser.GOLD_USER,
-        date: '27-03-2021',
-        description: 'Great hosts, location was a bit further than said'
+        date: '27-03-2021'
     },
     {
         name: 'Emily',
