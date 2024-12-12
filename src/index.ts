@@ -2,15 +2,9 @@ import * as fs from 'fs';
 import { showReview, populateUser, showDetails, getTopFourReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 import { Country, Price } from './types.js';
+import { Review } from './interfaces.js';
 
 let isLoggedIn: boolean;
-
-interface Review {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-}
 
 const reviews : Review[] = [
     {
@@ -255,12 +249,7 @@ const button = document.querySelector('button');
 
 let count = 0;
 
-function addReviews(array: {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-}[] ) : void {
+function addReviews(array: Review[] ) : void {
     if(!count) {
         count++;
         const topFour = getTopFourReviews(array);
