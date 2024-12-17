@@ -165,7 +165,7 @@ const properties = [
         location: {
             firstLine: 'Cottage 3A',
             city: 'Cotswolds',
-            code: 6743,
+            code: 'SW4 5XW',
             country: 'United Kingdom',
         },
         contact: [+1123495082908, 'countrysideserenity@example.com'],
@@ -237,19 +237,4 @@ mainImageContainer.appendChild(image);
 const footer = document.querySelector('footer');
 let currentLocation = ['Oslo', '15:55', -3];
 footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C';
-// class MainProperty {
-//     src: string
-//     title: string
-//     reviews: Review[]
-//     constructor(src: string, title: string, reviews: Review[]) {
-//         this.src = src
-//         this.title = title
-//         this.reviews = reviews
-//     }
-// }
-// let yourMainProperty = new MainProperty()
-// const mainImageContainer = document.querySelector('.main-image')
-// const image = document.createElement('img')
-// image.setAttribute('src', yourMainProperty.src)
-// mainImageContainer.appendChild(image)
 //# sourceMappingURL=index.js.map

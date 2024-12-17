@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { showReview, populateUser, showDetails, getTopFourReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 import { Country, Price } from './types.js';
-import Review from './interfaces.js';
+import Review, { Property } from './interfaces.js';
 import { MainImage } from './classes.js';
 
 let isLoggedIn: boolean;
@@ -108,19 +108,7 @@ const you: {
 
 populateUser(you.isReturning, you.firstName);
 
-const properties: {
-    image: string;
-    title: string;
-    price: Price;
-    location: {
-        firstLine: string;
-        city: string;
-        code: number;
-        country: Country; 
-    };
-    contact: [number, string];
-    isAvailable: boolean;
-}[] = [
+const properties: Property[] = [
     {
         image: 'https://img.freepik.com/premium-photo/small-wooden-house-large-stone-forest_236859-1336.jpg?w=740',
         title: 'Colombian Shack',
@@ -193,7 +181,7 @@ const properties: {
         location: {
             firstLine: 'Cottage 3A',
             city: 'Cotswolds',
-            code: 6743,
+            code: 'SW4 5XW',
             country: 'United Kingdom',
         },
         contact: [ +1123495082908, 'countrysideserenity@example.com'],
@@ -279,23 +267,3 @@ const footer = document.querySelector('footer');
 
 let currentLocation: [string, string, number] = ['Oslo', '15:55', -3];
 footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C';
-
-
-
-// class MainProperty {
-//     src: string
-//     title: string
-//     reviews: Review[]
-//     constructor(src: string, title: string, reviews: Review[]) {
-//         this.src = src
-//         this.title = title
-//         this.reviews = reviews
-//     }
-// }
-
-// let yourMainProperty = new MainProperty()
-
-// const mainImageContainer = document.querySelector('.main-image')
-// const image = document.createElement('img')
-// image.setAttribute('src', yourMainProperty.src)
-// mainImageContainer.appendChild(image)
