@@ -1,5 +1,5 @@
 import { LoyaltyUser, Permissions } from "./enums.js";
-import { Review } from "./interfaces.js";
+import Review from "./interfaces.js";
 
 const review = document.querySelector("#review") as HTMLHeadingElement;
 
