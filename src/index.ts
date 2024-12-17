@@ -3,10 +3,11 @@ import { showReview, populateUser, showDetails, getTopFourReviews } from './util
 import { Permissions, LoyaltyUser } from './enums.js';
 import { Country, Price } from './types.js';
 import Review from './interfaces.js';
+import { MainImage } from './classes.js';
 
 let isLoggedIn: boolean;
 
-const reviews : Review[] = [
+export const reviews : Review[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -265,7 +266,36 @@ function addReviews(array: Review[] ) : void {
 
 button.addEventListener('click', () => addReviews(reviews));
 
+
+let yourMainImage = new MainImage();
+
+let mainImageContainer = document.querySelector('.main-image');
+const image = document.createElement('img');
+image.setAttribute('src', yourMainImage.src);
+mainImageContainer.appendChild(image);
+
+
 const footer = document.querySelector('footer');
 
 let currentLocation: [string, string, number] = ['Oslo', '15:55', -3];
 footer.innerHTML = 'Location: ' + currentLocation[0] + ' | Current time: ' + currentLocation[1] + ' | Current temperature: ' + currentLocation[2] + '°C';
+
+
+
+// class MainProperty {
+//     src: string
+//     title: string
+//     reviews: Review[]
+//     constructor(src: string, title: string, reviews: Review[]) {
+//         this.src = src
+//         this.title = title
+//         this.reviews = reviews
+//     }
+// }
+
+// let yourMainProperty = new MainProperty()
+
+// const mainImageContainer = document.querySelector('.main-image')
+// const image = document.createElement('img')
+// image.setAttribute('src', yourMainProperty.src)
+// mainImageContainer.appendChild(image)
