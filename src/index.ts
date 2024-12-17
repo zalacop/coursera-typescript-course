@@ -255,7 +255,16 @@ function addReviews(array: Review[] ) : void {
 button.addEventListener('click', () => addReviews(reviews));
 
 
-let yourMainImage = new MainImage();
+let yourMainImage = new MainImage(
+    'https://img.freepik.com/free-photo/beautiful-sneznik-castle-sneznik-slovenia_181624-27457.jpg?t=st=1734426781~exp=1734430381~hmac=d8b522d11d9ef309bde19e054011f0c5997ecb1266e8d8046f6d50b1a9cd428a&w=1800',
+    'Slovenian House',
+    [{
+        name: 'Olive',
+        stars: 5,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
+        date: '12-04-2021'
+    }]
+);
 
 let mainImageContainer = document.querySelector('.main-image');
 const image = document.createElement('img');

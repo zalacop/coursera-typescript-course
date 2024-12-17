@@ -24,6 +24,15 @@ h4 {
     margin-left: 50px;
 }
 
+.main-image {
+    display: flex;
+    justify-content: center;
+}
+
+.main-image img {
+    width: 95%;
+}
+
 button {
     background-color: lightcoral;
     padding: 4px 20px;
