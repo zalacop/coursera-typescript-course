@@ -1,6 +1,6 @@
 import { showReview, populateUser, showDetails, getTopFourReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
-import { MainImage } from './classes.js';
+import MainImage from './classes.js';
 let isLoggedIn;
 export const reviews = [
     {

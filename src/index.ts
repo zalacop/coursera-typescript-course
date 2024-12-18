@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { showReview, populateUser, showDetails, getTopFourReviews } from './utils.js';
 import { Permissions, LoyaltyUser } from './enums.js';
 import Review, { Property } from './interfaces.js';
-import { MainImage } from './classes.js';
+import MainImage from './classes.js';
 
 let isLoggedIn: boolean;
 

@@ -1,6 +1,6 @@
 import Review from "./interfaces.js"
 
-export class MainImage {
+export default class MainImage {
     src: string
     title: string
     reviews: Review[]
