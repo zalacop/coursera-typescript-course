@@ -38,6 +38,14 @@ button {
     padding: 4px 20px;
     border: 1px solid black;
     margin-left: 45%;
+    box-shadow: none;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+button:hover {
+   background-color: darkturquoise;
+   border: 1px solid darkturquoise;
+   box-shadow: 5px 5px 5px grey;
 }
 
 .review-card {
